@@ -1,0 +1,82 @@
+<apex:page renderAs="pdf" controller="PrintJobPDFController" showHeader="false" sidebar="false" >
+  <div>
+    <div style="display: flex; align-items: flex-start;">
+      <div style="width: 33.33%; display: inline-block;">
+        <img src="{!URLFOR($Resource.SSH_Logo)}" alt="SSH Logo" style="margin-right: 10px;"/>
+      </div>
+      <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; display:inline-block;">
+        <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+      </div>
+      <div style="border: 1px solid black; padding: 8px; width: 170px; height: 174px; display:inline-block; margin:2%; margin-top: 15px;"></div>
+      <div style="border: 1px solid black; padding: 8px; width: 170px; height: 174px; display: inline-block; float: right; margin-right: 30px;"></div>
+    </div>
+    <div style="height: 22px;"></div>
+    <div style="display: flex;">
+      <div style="width: 33.33%; display: inline-block;"></div>
+      <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; display:inline-block; margin: 0 auto;">
+        <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+      </div>
+      <div style="width: 33.33%; display: inline-block;"></div>
+    </div>
+    <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; margin: 0 auto;">
+      <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+    </div>
+  </div>
+  <div style="margin-top: 22px;">
+    <div>
+      <h2 style="border: 1px solid black; padding: 8px;">Silver Hill Hospital Information</h2>
+    </div>     
+<!-- <table style="border: 1px solid black; border-collapse: collapse;"> -->
+<!-- <tr>
+    <th style="border: 1px solid black; padding: 8px;">Sr No</th>
+    <th style="border: 1px solid black; padding: 8px;">Name</th>
+    <th style="border: 1px solid black; padding: 8px;">Email</th>
+    <th style="border: 1px solid black; padding: 8px;">Mobile</th>
+    <th style="border: 1px solid black; padding: 8px;">Description</th>
+</tr>
+<tr>
+    <td style="border: 1px solid black; padding: 8px;">1</td>
+    <td style="border: 1px solid black; padding: 8px;">John Doe</td>
+    <td style="border: 1px solid black; padding: 8px;">johndoe@example.com</td>
+    <td style="border: 1px solid black; padding: 8px;">1234567890</td>
+    <td style="border: 1px solid black; padding: 8px;">Alcoholic,Stress,Panic attacks.</td>
+</tr> -->
+<!-- <tr>
+    <td style="border: 1px solid black; padding: 8px;">2</td>
+    <td style="border: 1px solid black; padding: 8px;">Jane Smith</td>
+    <td style="border: 1px solid black; padding: 8px;">janesmith@example.com</td>
+    <td style="border: 1px solid black; padding: 8px;">9876543210</td>
+    <td style="border: 1px solid black; padding: 8px;">Drug addiction,Stress,Panic</td>
+</tr>
+<tr>
+    <td style="border: 1px solid black; padding: 8px;">3</td>
+    <td style="border: 1px solid black; padding: 8px;">Jane Washington</td>
+    <td style="border: 1px solid black; padding: 8px;">jsmith@example.com</td>
+    <td style="border: 1px solid black; padding: 8px;">8734256754</td>
+    <td style="border: 1px solid black; padding: 8px;">Anxiety,Stress,Depression,Drug addiction.</td>
+</tr> -->
+<table style="border: 1px solid black; border-collapse: collapse;">
+  <tr>
+      <th style="border: 1px solid black; padding: 8px;">Sr No</th>
+      <th style="border: 1px solid black; padding: 8px;">Name</th>
+      <th style="border: 1px solid black; padding: 8px;">Email</th>
+      <th style="border: 1px solid black; padding: 8px;">Mobile</th>
+      <th style="border: 1px solid black; padding: 8px;">Description</th>
+  </tr>
+  <apex:repeat value="{!contacts}" var="contact" id="contactTable">
+      <tr>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.rowNumber__c}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Name}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Email}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Phone}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Health_Description__c}</td>
+      </tr>
+  </apex:repeat>
+</table>
+</div>
+<div>
+  <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
+  <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
+  <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
+</div>
+</apex:page>
