@@ -3,12 +3,12 @@
     <div style="display: flex; align-items: flex-start;">
       <div style="width: 170px; height: 174px; display: inline-block;">
         <!-- <img src="{!URLFOR($Resource.SSH_Logo)}" alt="SSH Logo" style="margin-right: 10px;"/> -->
-       <img src="{!URLFOR($Resource.SSH_Logo)}" alt="SSH Logo" style="margin-right: 10px; width: 150px; height: 190px;" />
+       <img src="{!URLFOR($Resource.SSH_Logo)}" alt="SSH Logo" style="margin-right: 10px; width: 150px; height: 160px; margin-bottom:2%;" />
       </div>
-      <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; display:inline-block;margin-bottom:2%;">
+      <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; display:inline-block;margin-bottom:0.07%;">
         <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
       </div>
-        <table style="border: 1px solid black; border-collapse: collapse; float: right; margin-right: 30px;">
+        <table style="border: 1px solid black; border-collapse: collapse; float: right; margin-right: 5px;">
           <tr>
             <th colspan="4" style="text-align: center; border: 1px solid black; padding: 8px;">Data</th>
           </tr>
@@ -24,7 +24,7 @@
             <td style="border: 1px solid black; padding: 8px;">John</td>
             <td style="border: 1px solid black; padding: 8px;">1</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td style="border: 1px solid black; padding: 8px;">2</td>
             <td style="border: 1px solid black; padding: 8px;">17th May 2023</td>
             <td style="border: 1px solid black; padding: 8px;">John</td>
@@ -35,21 +35,30 @@
             <td style="border: 1px solid black; padding: 8px;">18th May 2023</td>
             <td style="border: 1px solid black; padding: 8px;">Elea</td>
             <td style="border: 1px solid black; padding: 8px;">2</td>
-          </tr>
+          </tr> -->
         </table>
     </div>
-    <div style="border: 1px solid black; padding: 8px; width: 235px; height: 180px; display: inline-block; float: right; margin-right: 30px; margin-top:4%;"></div>
+    <div style="border: 1px solid black; padding: 8px; width: 210px; height: 130px; display: inline-block; float: right; margin-right: 30px; margin-top: 4%; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);"></div>
   </div>
-  <div style="height: 10px;"></div>
+  <div>
+    <h4 style="margin: 0; width:100px; height:10px;">Address - 
+      208 Valley Road,
+      New canaan,
+      Petron Street,
+      CT 06840,
+      USA
+    </h4>
+  </div>
+  <!-- <div style="height: 3px;"></div> -->
   <div style="display: flex;">
-    <div style="width: 33.33%; display: inline-block;"></div>
-    <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; display:inline-block; margin-left:25%;margin-bottom:5%;">
-      <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+    <div style="width: 33.33%; display: inline-block; margin-bottom:12%"></div>
+    <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; display:inline-block; margin-left:25%;margin-bottom:1%;">
+      <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment.</h4>
     </div>
     <div style="width: 33.33%; display:inline-block;"></div>
   </div>
-  <div style="border: 1px solid black; padding: 8px; width: 30%; height: 15%; margin-left:25%;">
-    <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+  <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; margin-left:25%;">
+    <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment.</h4>
   </div>
   <div style="margin-top: 22px;">
     <div>
@@ -75,8 +84,9 @@
     </table>
   </div>
   <div>
-    <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
-    <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
-    <div style="border: 1px solid black; padding: 8px; width: 180px; height: 140px; display:inline-block; margin:2%; margin-top: 15px;"></div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Rushikesh Kardile</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Shraddha Mam</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Client Login Id</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Client Login Id</div>
   </div>
 </apex:page>
