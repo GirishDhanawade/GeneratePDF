@@ -1,0 +1,83 @@
+<apex:page renderAs="pdf" controller="PrintJobPDFController" showHeader="false" sidebar="false">
+  <div>
+    <div style="display: flex; align-items: flex-start;">
+      <div style="width: 170px; height: 174px; display: inline-block;">
+        <img src="{!URLFOR($Resource.SSH_Logo)}" alt="SSH Logo" style="margin-right: 10px; width: 150px; height: 160px; margin-bottom:2%;" />
+      </div>
+      <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; display:inline-block;margin-bottom:0.07%;">
+        <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment. This includes psychiatric and addiction services.</h4>
+      </div>
+      
+    <table style="border: 1px solid black; border-collapse: collapse; float: right; margin-right: 5px;">
+      <tr>
+        <th colspan="4" style="text-align: center; border: 1px solid black; padding: 8px;">Data</th>
+      </tr>
+      <tr>
+        <th style="border: 1px solid black; padding: 8px;">No</th>
+        <th style="border: 1px solid black; padding: 8px;">Date</th>
+        <th style="border: 1px solid black; padding: 8px;">Name</th>
+        <th style="border: 1px solid black; padding: 8px;">Page</th>
+      </tr> 
+      <tr>
+        <td style="border: 1px solid black; padding: 8px;">1</td>
+        <td style="border: 1px solid black; padding: 8px;">
+            <apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!TODAY()}" />
+            </apex:outputText>
+        </td>
+        <td style="border: 1px solid black; padding: 8px;">John Dok</td>
+        <td style="border: 1px solid black; padding: 8px;">1</td>
+    </tr>       
+    </table>
+    </div>
+    <div style="border: 1px solid black; padding: 8px; width: 210px; height: 130px; display: inline-block; float: right; margin-right: 30px; margin-top: 4%; box-shadow: 10px 10px;"></div>
+  </div>
+  <div>
+    <h4 style="margin: 0; width:100px; height:10px;">Address - 
+      208 Valley Road,
+      New Canaan,
+      Petron Street,
+      CT 06840,
+      USA
+    </h4>
+  </div>
+  <div style="display: flex;">
+    <div style="width: 33.33%; display: inline-block; margin-bottom:12%"></div>
+    <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; display:inline-block; margin-left:25%;margin-bottom:1%;">
+      <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment.</h4>
+    </div>
+    <div style="width: 33.33%; display:inline-block;"></div>
+  </div>
+  <div style="border: 1px solid black; padding: 8px; width: 33%; height: 26%; margin-left:25%;">
+    <h4 style="margin: 0;">Silver Hill Hospital is a non-profit psychiatric hospital in New Canaan, Connecticut established in 1931. The hospital is accredited by the Joint Commission and provides behavioral health care treatment.</h4>
+  </div>
+  <div style="margin-top: 22px;">
+    <div>
+      <h2 style="border: 1px solid black; padding: 8px;">Silver Hill Hospital Information</h2>
+    </div>     
+    <table style="border: 1px solid black; border-collapse: collapse;">
+      <tr>
+        <th style="border: 1px solid black; padding: 8px;">Sr No</th>
+        <th style="border: 1px solid black; padding: 8px;">Name</th>
+        <th style="border: 1px solid black; padding: 8px;">Email</th>
+        <th style="border: 1px solid black; padding: 8px;">Mobile</th>
+        <th style="border: 1px solid black; padding: 8px;">Description</th>
+      </tr>
+      <apex:repeat value="{!contacts}" var="contact" id="contactTable">
+        <tr>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.rowNumber__c}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Name}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Email}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Phone}</td>
+          <td style="border: 1px solid black; padding: 8px;">{!contact.Health_Description__c}</td>
+        </tr>
+      </apex:repeat>
+    </table>
+  </div>
+  <div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Rushikesh Kardile</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Shraddha Mam</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Client Login Id</div>
+    <div style="border: 1px solid black; padding: 8px; width: 125px; height: 35px; display:inline-block; margin:2%; margin-top: 15px;">Client Login Id</div>
+  </div>
+</apex:page>
