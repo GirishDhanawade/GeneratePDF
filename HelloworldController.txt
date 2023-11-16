@@ -1,0 +1,28 @@
+public with sharing class HelloWorldController {
+    @AuraEnabled
+    public static String generatePDF() {
+        try {
+            Blob pdfBlob = generatePDFContent();
+            return EncodingUtil.base64Encode(pdfBlob);
+        } catch (Exception ex) {
+            throw new AuraHandledException('PDF generation failed: ' + ex.getMessage());
+        }
+    }
+    private static Blob generatePDFContent() {
+        String pdfContent = 'Hello World';
+        String apiEndpoint = 'https://pdf-generation-service.com/generate-pdf';
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(apiEndpoint);
+        request.setMethod('POST');
+        request.setHeader('Content-Type', 'application/json');
+        request.setBody('{"content": "' + pdfContent + '"}');
+        HttpResponse response = new Http().send(request);
+        
+        if (response.getStatusCode() == 200) {
+            Blob pdfBlob = response.getBodyAsBlob();
+            return pdfBlob;
+        } else {
+            throw new AuraHandledException('PDF generation failed with status code: ' + response.getStatusCode());
+        }
+    }
+}
